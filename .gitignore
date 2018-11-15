@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+db.json
+.deploy*/
+dist/
+node_modules/
+*.har
+*.log
+resource/*.js
+override/*.js
+result/*.json
+RNString.txt
+manifest.json
+getAllPostUrl.js
+package-lock.json
