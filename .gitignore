@@ -4,8 +4,8 @@ db.json
 .deploy*/
 dist/
 node_modules/
-*.har
 *.log
+*.har
 resource/*.js
 override/*.js
 result/*.json

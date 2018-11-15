@@ -1,7 +1,7 @@
 	var fs = require("fs");
 	// 异步读取   201806221121_all  20180621_all  201806231711_all 201806232224_all
 	// esop_201806261821_all
-	fs.readFile('20181102-2crm.har', function (err, data) {
+	fs.readFile('www.baidu.com.har', function (err, data) {
 		if (err) {
 			return console.error(err);
 		}
