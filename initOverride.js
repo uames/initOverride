@@ -1,7 +1,7 @@
 	var fs = require("fs");
 	// 异步读取   201806221121_all  20180621_all  201806231711_all 201806232224_all
 	// esop_201806261821_all
-	fs.readFile('www.baidu.com.har', function (err, data) {
+	fs.readFile('10.121.181.239.har', function (err, data) {
 		if (err) {
 			return console.error(err);
 		}
@@ -38,7 +38,7 @@
 							names.push(name);
 							sizes.push(textLen);
 							filenames.push(fname);
-							fs.writeFile('resource/'+fname,text);
+							fs.writeFile('resource/'+fname,text,String,()=>{});
 							num++;
 						}else if(nIdx_>-1 && sizes_[nIdx_]!=textLen){
 							var _names = names_.slice(nIdx_+1);
@@ -49,6 +49,7 @@
 							// '-----'+names_[nIdx_],'size:'+sizes_[nIdx_]);
 							// 递归对比当前已重载的所有同名文件
 							sliceNum += nIdx_+1;
+
 							fname = getFileName(_nIdx,fname,_names,_sizes,_filenames);
 						}
 						return fname;
@@ -69,8 +70,8 @@
 				}
 			});
 
-			fs.writeFile('./result/overrides.json',JSON.stringify(overrides, null, 2));
-			fs.writeFile('./result/already.json',JSON.stringify(linkArr, null, 2));
-			fs.writeFile('./result/result.json',JSON.stringify({names,sizes,filenames}, null, 2));
+			fs.writeFile('./result/overrides.json',JSON.stringify(overrides, null, 2),String,()=>{});
+			fs.writeFile('./result/already.json',JSON.stringify(linkArr, null, 2),String,()=>{});
+			fs.writeFile('./result/result.json',JSON.stringify({names,sizes,filenames}, null, 2),String,()=>{});
 		});
 	});
